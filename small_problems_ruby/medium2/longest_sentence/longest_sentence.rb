@@ -1,9 +1,3 @@
-=begin
-'a', 'b'
-
-=end
-
-
 def longest_sentence(file_name)
   file = File.open(file_name)
   text = file.readlines.map(&:chomp).join(' ')
