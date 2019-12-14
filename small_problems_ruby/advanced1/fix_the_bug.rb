@@ -63,4 +63,3 @@ p my_method([]) == []
 p my_method([3]) == [21]
 p my_method([3, 4]) == [9, 16]
 p my_method([5, 6, 7]) == [25, 36, 49]
-
