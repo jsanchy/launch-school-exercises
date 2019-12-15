@@ -16,8 +16,7 @@ the result of the ternary operation
 
 3 is truthy, so the ternary operator will always return `true`, and then
 `odd_count` will be assigned to that value. So, to fix this behavior, change the
-line to replace `=` with `==`,
-as in:
+line to replace `=` with `==`, as in:
 
   odd_count == 3 ? true : false
 
