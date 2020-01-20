@@ -12,10 +12,6 @@ class Card
     value <=> other.value
   end
 
-  def ==(other)
-    value == other.value
-  end
-
   def value
     VALUES.fetch(rank, rank)
   end

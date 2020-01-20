@@ -10,11 +10,9 @@ class Card
   end
 
   def <=>(other)
-    if self == other
-      LOW_TO_HIGH_SUITS.index(suit) <=> LOW_TO_HIGH_SUITS.index(other.suit)
-    else
-      value <=> other.value
-    end
+    value_comparison = value <=> other.value
+    return value_comparison unless value_comparison.zero?
+    LOW_TO_HIGH_SUITS.index(suit) <=> LOW_TO_HIGH_SUITS.index(other.suit)
   end
 
   def ==(other)
@@ -34,6 +32,7 @@ cards = [Card.new(2, 'Hearts'),
          Card.new(10, 'Diamonds'),
          Card.new('Ace', 'Clubs')]
 puts cards
+puts Card.new(2, 'Hearts')
 puts cards.min == Card.new(2, 'Hearts')
 puts cards.max == Card.new('Ace', 'Clubs')
 
